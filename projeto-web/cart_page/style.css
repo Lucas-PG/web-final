@@ -1,0 +1,360 @@
+:root {
+  --highlight-color: orange;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "JetBrains Mono", monospace;
+}
+body {
+  overflow-x: hidden;
+  padding: 50px 100px;
+}
+header {
+  height: 15%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: 3.5fr 1.5fr;
+  grid-template-rows: 1fr;
+}
+.finish-purchase {
+  width: 90%;
+  max-height: 45vh;
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(
+      45deg,
+      black 25%,
+      transparent 25%,
+      transparent 75%,
+      black 75%,
+      black
+    ),
+    linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+  color: #fff;
+  padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 30px;
+}
+.finish-purchase span {
+  width: 100%;
+}
+.cart-finish-purchase,
+.sub-total-outer,
+.delivery-outer,
+.total-outer {
+  margin-left: 50px;
+}
+.sub-total-outer {
+  margin-top: 10%;
+}
+.dividing-div-finish-purchase {
+  width: 90%;
+  height: 2px;
+  background-color: var(--highlight-color);
+  margin-top: 10%;
+}
+.finish-purchase-button {
+  padding: 10px 50px;
+  background-color: var(--highlight-color);
+  border: none;
+  margin-top: 5%;
+}
+main {
+  padding: 0px 30px 50px 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto, 1fr);
+  gap: 15px;
+  justify-content: center;
+  overflow: auto;
+}
+.product-outer {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 0.5fr 1fr 0.3fr;
+  min-height: 150px;
+  max-height: 150px;
+  background-color: #fff;
+  color: #000;
+}
+.product-outer div {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-img {
+  min-width: 100%;
+  height: 100%;
+}
+
+.quantity-outer {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+.qnt-counter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.increase-qnt,
+.decrease-qnt {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+.increase-qnt:hover,
+.decrease-qnt:hover {
+  background-color: rgb(222, 222, 222);
+  scale: 1.1;
+}
+.trash-can i {
+  cursor: pointer;
+}
+.trash-can i:hover {
+  scale: 1.1;
+}
+
+footer {
+  max-height: 9.3vh;
+  max-width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 20px 100px 0 100px;
+  margin-bottom: 30px;
+}
+.turn-back a {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .finish-purchase {
+    width: 50%;
+    max-height: 45vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 30px;
+    font-size: 14px;
+  }
+  main {
+    padding: 30px 0px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .product-img {
+    min-width: 100px;
+    min-height: 90px;
+  }
+  footer {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  header {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .dividing-div {
+    height: 50px;
+    width: 2px;
+    background-color: var(--highlight-color);
+  }
+  .left-header-div {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .main-container {
+    width: 100%;
+  }
+  main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 auto;
+
+    margin-top: 10px;
+  }
+
+  .product-outer {
+    min-height: 350px;
+    min-width: 60%;
+    max-width: 60%;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .product-name {
+    font-size: 14px;
+    padding: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  footer button {
+    display: none;
+  }
+  footer div {
+    display: flex;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .dividing-div {
+    height: 50px;
+    width: 2px;
+    background-color: var(--highlight-color);
+  }
+  .finish-purchase {
+    margin-top: 40px;
+    width: 60%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  main {
+    width: 100%;
+    padding: 0px 50px;
+    gap: 15px;
+    justify-content: center;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .product-outer {
+    min-height: 350px;
+    min-width: 300px;
+    max-width: 300px;
+    font-size: 11px;
+    margin: 0;
+    padding: 0;
+    grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    font-size: 14px;
+  }
+  .product-img {
+    width: 100%;
+    height: 100%;
+  }
+  .product-name {
+    padding: 0;
+    background-color: #fff;
+    text-align: center;
+  }
+  footer {
+    height: 20%;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  footer button {
+    position: absolute;
+    display: none;
+  }
+  footer div {
+    display: flex;
+    gap: 10px;
+  }
+}

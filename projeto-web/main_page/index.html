@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+  <script src="js/index.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200;400&display=swap" rel="stylesheet">
+  <title>Lucas-Motors</title>
+</head>
+
+<body>
+  <div class="menu-container" id="menuContainer">
+
+    <div class="logo-menu">LOGO</div>
+
+    <div class="other-pages">
+      <div class="dividing-div-menu"></div>
+      <a href="../cart_page/index.html">Carrinho</a>
+
+      <a href="">Finalizar</a>
+
+      <div class="dividing-div-menu"></div>
+      <a href="../enter_page/index.html">Entrar</a>
+
+      <a href="">Cadastrar-se</a>
+
+      <a href="../admin_page/index.html">Administrador</a>
+    </div>
+  </div>
+  <header>
+    <div class="left-header-container">
+      <div class="logo-div">
+        LOGO
+      </div>
+      <div class="srch-product-div">
+        <input type="text" placeholder="BUSCAR PRODUTO" id="searchBar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+    </div>
+    <div class="adm-btns-outer">
+      <button type="button" onclick="openProductAddWindow()">Adicionar produto</button>
+      <button type="button" onclick="openProductRemoveWindow()">Remover produto</button>
+    </div>
+    <div class="open-menu-div" id="menuOpener">
+      <div class="first-bar-menu" id="firstBar"></div>
+      <div class="second-bar-menu" id="secondBar"></div>
+      <div class=" third-bar-menu" id="thirdBar"></div>
+    </div>
+  </header>
+  <main>
+
+
+    </div>
+  </main>
+  <div class="overlay" id="overlay" onclick="openProductAddWindow()"></div>
+  <div class="product-add-outer-div" id="addProductWindow">
+    <div class="product-add-span-div">
+      <span>Adicionar Produto</span>
+      <div class="add-product-dividing-div">
+      </div>
+    </div>
+    <div class="add-product-outer-form">
+      <form id="addProductForm">
+        <input type="text" placeholder="Nome do produto" name="name">
+        <input type="text" placeholder="Preço do produto" name="price">
+        <input type="text" placeholder="Imagem do produto" name="img">
+        <button type="button" onclick="postNewProduct()">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  <div class="overlay" id="overlay2" onclick="openProductRemoveWindow()"></div>
+  <div class="product-remove-outer-div" id="removeProductWindow">
+    <div class="product-remove-span-div">
+      <span>Remover Produto</span>
+      <div class="remove-product-dividing-div">
+      </div>
+    </div>
+    <div class="remove-product-outer-form">
+      <form id="removeProductForm">
+        <select name="deleteId" id="selectRemove">
+
+        </select>
+        <button type="button" onclick="removeProduct()">Remover</button>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
